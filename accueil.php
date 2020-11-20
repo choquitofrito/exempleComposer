@@ -10,6 +10,7 @@
 <body>
     <?php
         echo "Exemple composer";
+        
         require "./vendor/autoload.php";
 
         // importer les namespaces
