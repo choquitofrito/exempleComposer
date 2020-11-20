@@ -6,6 +6,52 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit41b9482ada3896a2a366d242e2cc6db3
 {
+    public static $files = array (
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+    );
+
+    public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Ctype\\' => 23,
+            'Symfony\\Component\\PropertyAccess\\' => 33,
+            'Symfony\\Component\\Inflector\\' => 28,
+            'Symfony\\Component\\EventDispatcher\\' => 34,
+        ),
+        'I' => 
+        array (
+            'Ivory\\JsonBuilder\\' => 18,
+            'Ivory\\GoogleMap\\' => 16,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Symfony\\Polyfill\\Ctype\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
+        'Symfony\\Component\\PropertyAccess\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/property-access',
+        ),
+        'Symfony\\Component\\Inflector\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/inflector',
+        ),
+        'Symfony\\Component\\EventDispatcher\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
+        ),
+        'Ivory\\JsonBuilder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/egeloen/json-builder/src',
+        ),
+        'Ivory\\GoogleMap\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/egeloen/google-map/src',
+        ),
+    );
+
     public static $prefixesPsr0 = array (
         'M' => 
         array (
@@ -23,6 +69,8 @@ class ComposerStaticInit41b9482ada3896a2a366d242e2cc6db3
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit41b9482ada3896a2a366d242e2cc6db3::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit41b9482ada3896a2a366d242e2cc6db3::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit41b9482ada3896a2a366d242e2cc6db3::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit41b9482ada3896a2a366d242e2cc6db3::$classMap;
 
